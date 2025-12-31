@@ -29,24 +29,29 @@
             left: 0;
             right: 0;
             bottom: 0;
+            overscroll-behavior: none;
         }
 
         .download-btn {
-            padding: 22px 70px;
+            padding: 20px 70px;
             border: 2px solid black;
             border-radius: 50px;
             background: radial-gradient(ellipse at center, #f7f7f7 0%, #fff5ee 100%);
-            font-size: 20px;
-            font-weight: 500;
+            font-size: 23px;              /* Увеличен с 20px */
+            font-weight: 600;             /* Жирнее для лучшей читаемости */
             color: #333;
             cursor: pointer;
             transition: all 0.2s ease;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             text-decoration: none;
-            display: inline-block;
             touch-action: manipulation;
             -webkit-user-select: none;
             user-select: none;
+
+            /* Ключевые изменения для идеального центрирования */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .download-btn:hover {
@@ -64,7 +69,7 @@
         @media (max-width: 768px) {
             .download-btn {
                 padding: 20px 60px;
-                font-size: 18px;
+                font-size: 21px;
             }
         }
 
@@ -72,13 +77,8 @@
         @media (max-width: 375px) {
             .download-btn {
                 padding: 18px 50px;
-                font-size: 17px;
+                font-size: 20px;
             }
-        }
-
-        /* Prevent pull-to-refresh and overscroll */
-        body {
-            overscroll-behavior: none;
         }
     </style>
 </head>
